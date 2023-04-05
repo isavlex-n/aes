@@ -1,0 +1,213 @@
+extends ../layouts/main
+
+block varibles
+    -var pageTitle = 'AES PRODUCTION'
+    -var cssPath = '../../static/scss/main.scss'
+
+block content
+    <!-- Yandex.Metrika counter -->
+    script.
+        (function(m,e,t,r,i,k,a){m[i] = m[i] || function () { (m[i].a = m[i].a || []).push(arguments) };
+        m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+        ym(57238252, "init", {
+                clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+        });
+    <noscript><div><img src="https://mc.yandex.ru/watch/57238252" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+    +jumping-buttons()
+    .fluid.fluid--black.fluid--fixed
+        .wrap.header
+            .header__logo
+                a(href="./" class="header__link") AES PRODUCTION
+            .header__menu
+                +menu({"items": ["Обо мне", "Портфолио", "Отзывы", "Контакты"], "links": ["about", "portfolio", "reviews", "contacts"]})
+    .fluid.fluid--p104
+        <iframe width="100%" height="120" src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&feed=%2F%D0%B5%D0%B2%D0%B3%D0%B5%D0%BD%D0%B8%D0%B9-%D0%B0%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80%D0%BE%D0%B23%2Fsoul-music-for-you-mixed-by-aes%2F" frameborder="0" ></iframe>
+        a(id="about")
+        .wrap.about
+            .about__img
+                img(src="../../static/img/about.jpg", class="about__pic" ,alt="Ведущий Евгений Александров")
+            .about__text.center
+                h1 Евгений Александров
+                h2 профессиональный ведущий
+                p.stars *****
+                p Евгений Александров - артист, который проведет мероприятие на высшем уровне и сделает незабываемым Ваш день рождения, юбилей, корпоратив или свадьбу.
+                p Чувство такта дает возможность найти свой подход к каждому гостю, а его харизма никого не оставит равнодушным. Для мероприятия готовится уникальная программа, сценарий которой не лишен креатива.
+                p Евгений Александров не только опытный ведущий, но и великолепный музыкант. Имеет сильный вокал, который высоко оценит даже самая искушенная публика. Вы сможете услышать как поп, рок хиты, так и классику джаза.
+                p Он точно знает, как сделать нужную атмосферу на мероприятии. Драйв, энергетика, стиль и уверенность, а так же свободная импровизация, вот что отличает его от других.
+    .fluid.fluid--black
+        a(id="portfolio")
+        .wrap.gallery
+            #lightgallery
+                a(class="lightgallery__full-img"  href="../../static/img/gallery/full/gallery-1.jpg") 
+                    img(class="lightgallery__img" src="../../static/img/gallery/min/min-gallery-1.jpg" alt="Ведущий Евгений Александров")
+                a(href="../../static/img/gallery/full/gallery-2.jpg" class="lightgallery__full-img") 
+                    img(src="../../static/img/gallery/min/min-gallery-2.jpg" class="lightgallery__img" alt="Ведущий Евгений Александров")
+                a(href="../../static/img/gallery/full/gallery-3.jpg" class="lightgallery__full-img") 
+                    img(src="../../static/img/gallery/min/min-gallery-3.jpg" class="lightgallery__img" alt="Ведущий Евгений Александров")
+    .fluid
+        .wrap.gallery
+            .slider
+                .slider__controls
+                    .slider__left
+                    .slider__right
+                .slider__slides
+                    div(class="slider__slide slider__slide--video" data-video="https://www.youtube.com/embed/hDWfpCCAKoY?autoplay=1")
+                        <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg" class="slider__svg-icon" ><path  class="slider__svg-icon-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="slider__svg-icon-play" d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+                        img(src="../../static/img/slider/how.jpg", alt="Ведущий Евгений Александров" class="slider__pic")
+                    div(class="slider__slide slider__slide--video" data-video="https://www.youtube.com/embed/6HeeDmfQWgc?autoplay=1")
+                        <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg" class="slider__svg-icon" ><path  class="slider__svg-icon-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="slider__svg-icon-play" d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+                        img(src="../../static/img/slider/slider-1.jpg", alt="Ведущий Евгений Александров" class="slider__pic")
+                    div(class="slider__slide slider__slide--video" data-video="https://www.youtube.com/embed/TNwfr313Tsg?autoplay=1")
+                        <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg" class="slider__svg-icon" ><path  class="slider__svg-icon-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="slider__svg-icon-play" d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+                        img(src="../../static/img/slider/stub.jpg", alt="Ведущий Евгений Александров" class="slider__pic")
+                    div(class="slider__slide slider__slide--video" data-video="https://www.youtube.com/embed/UWFaBKJJx0g?autoplay=1")
+                        <svg viewBox="0 0 68 48" width="68" height="48" xmlns="http://www.w3.org/2000/svg" class="slider__svg-icon" ><path  class="slider__svg-icon-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z"></path><path class="slider__svg-icon-play" d="M 45,24 27,14 27,34" fill="#fff"></path></svg>
+                        img(src="../../static/img/slider/zveri.jpg", alt="Ведущий Евгений Александров" class="slider__pic")
+                    
+                .slider__nav
+                    .slider__dot
+                    .slider__dot
+                    .slider__dot
+                    .slider__dot
+    .fluid.fluid--black
+        .wrap.gallery
+            a(id="reviews")
+            h2.center.big Отзывы наших клиентов
+            .reviews
+                .reviews__controls
+                    .reviews__left
+                    .reviews__right
+                .reviews__slides
+                    .reviews__review
+                        p.reviews__text Женя, огромное спасибо тебе и твоим ребятам. Вы были как всегда на высоте! Остались незабываемые впечатления у нас и у всех гостей! Вы супер! Как обычно буду рекомендовать тебя всем знакомым.
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/klochkova.jpg", alt="Наталия Клочкова" class="reviews__img")
+                            h3.reviews__name Наталия Клочкова
+                            p.reviews__event юбилей мужа
+                            a(href="https://www.facebook.com/profile.php?id=100001061987625" target="blank")
+                                .facebook
+                    .reviews__review
+                        p.reviews__text Женя - человек, с которым максимально комфортно работать. Интеллигентный, с чувством такта, все предусмотрит, отзывчивый. Провели совместно множество проектов, а мы доверяем только лучшим в индустрии ивента.
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/maksimovich.jpg", alt="Юлия Максимович" class="reviews__img")
+                            h3.reviews__name Юлия Максимович
+                            p.reviews__event Event агенство
+                            a(href="https://www.facebook.com/yuliya.maksimovich.9" target="blank")
+                                .facebook
+                    .reviews__review
+                        p.reviews__text Женя вел наш праздник и все 50 человек оценили работу по достоинству! Спасибо Женя, ты сделал наш вечер!
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/volhnov.jpg", alt="Андрей Волхонов" class="reviews__img")
+                            h3.reviews__name Андрей Волхонов
+                            p.reviews__event свадьба
+                            a(href="https://vk.com/id5376754" target="blank")
+                                .vk
+                    .reviews__review
+                        p.reviews__text Все очень понравилось, спасибо большое!))) Ребята в восторге, сказали, что ты им понравился, ненавязчивый и все в меру)) И конкурсы классные, никакой ерунды)) Все было супер, спасибо большое!)))
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/mikhaleva.png", alt="Алеся Михалева" class="reviews__img")
+                            h3.reviews__name Алеся Михалева
+                            p.reviews__event корпоратив
+                            a(href="https://www.instagram.com/alesya_mhlv/" target="blank")
+                                .instagram
+                    .reviews__review
+                        p.reviews__text Женя, хочу выразить сердечную Благодарность за твой великолепный труд! Ты самый ЛУЧШИЙ ведущий! Огромное спасибо тебе и твоей команде за проведение нашего незабываемого праздника.
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/graciani.jpg", alt="Анастасия Грациани" class="reviews__img")
+                            h3.reviews__name Анастасия Грациани
+                            p.reviews__event юбилей
+                            a(href="https://vk.com/graciani" target="blank")
+                                .vk
+                    .reviews__review
+                        p.reviews__text Спасибо, Евгений! Вы, ведущий от бога! Свадьба брата запомнится нам на всю жизнь! Всё было просто замечательно, музыка, конкурсы, шутки! Наша мама не очень ладила с тёщей до свадьбы, к концу вечера же, они стали лучшими подругами. Атмосфера была просто волшебной! Ещё раз спасибо вам большое! Обязательно расскажу про вас всем друзьям.
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/polyakova.jpg", alt="Татьяна Полякова" class="reviews__img")
+                            h3.reviews__name Татьяна Полякова
+                            p.reviews__event свадьба
+                            a(href="https://www.instagram.com/tanya_korolev/" target="blank")
+                                .instagram
+                    .reviews__review
+                        p.reviews__text Привет! Я сейчас на юбилее, это кошмар, а не ведущие! Всеми руками за тебя, бронирую на 10 марта! Женя, ты гений вместе со своей командой!
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/sazikina.jpg", alt="Ольга Сазыкина" class="reviews__img")
+                            h3.reviews__name Ольга Сазыкина
+                            p.reviews__event свадьба
+                            a(href="https://vk.com/sazykinao" target="blank")
+                                .vk
+                    .reviews__review
+                        p.reviews__text Спасибо! Все было замечательно, гости были в восторге! Особое спасибо за время, которое ты уделял нам до свадьбы, мы так переживали, но ты всегда был на связи и поддерживал.
+                        .reviews__person
+                            .reviews__wrap
+                                img(src="../../static/img/reviews/volkova.jpg", alt="Екатерина Волкова" class="reviews__img")
+                            h3.reviews__name Екатерина Волкова
+                            p.reviews__event свадьба
+                            a(href="https://www.instagram.com/vopitropi/" target="blank")
+                                .instagram
+                .reviews__nav
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+                    .reviews__dot
+    .fluid
+        .wrap.gallery
+            h2.center.big Выбирая меня, вы получаете
+            .skills
+                .skills__item
+                    .skills__img
+                        img(src="../../icons/charity.svg", class="skills__pic" alt="Благотворительность")
+                    .skills__text
+                        h2 Благотворительность
+                        p Проведение и выступление на благотворительных мероприятиях, направленных на помощь детям совершенно бесплатно.
+                .skills__item
+                    .skills__img
+                        img(src="../../icons/star.svg", class="skills__pic" alt="Высокое качество")
+                    .skills__text
+                        h2 Высокое качество
+                        p За 7 лет работы в ивент индустрии я получил бесценный опыт, который постоянно пополняю на различных мастер классах.
+                .skills__item
+                    .skills__img
+                        img(src="../../icons/wink.svg", class="skills__pic" alt="Искренние эмоции")
+                    .skills__text
+                        h2 Искренние эмоции
+                        p Как артист, я понимаю, что это профессия требует полной самоотдачи и единственный способ пополнить свою энергию - это обратная связь от вас.
+                .skills__item
+                    .skills__img
+                        img(src="../../icons/support.svg", class="skills__pic" alt="Поддержка на любом этапе мероприятия")
+                    .skills__text
+                        h2 Поддержка на любом этапе мероприятия
+                        p Вы всегда можете рассчитывать на мою помощь. За время работы мы собрали профессиональную команду, которая решит любую задачу.
+        +social({"mode": "fluid"})
+    .fluid.fluid--black
+        .wrap.gallery
+            a(id="contacts")
+            .contacts
+                a(href="tel:+79164942042" class="link-white") +7 (916) 494-20-42
+                a(href="mailto:e.alexandrov68@gmail.com?subject=Мероприятие" class="link-white") e.alexandrov68@gmail.com
+            
+
+
+
+
+
+
+                
+    
+    
+
+block scripts
+    script(src="../../static/js/main.js" type="module")
