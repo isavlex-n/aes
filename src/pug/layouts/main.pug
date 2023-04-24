@@ -3,13 +3,18 @@ include ../../components/components
 include ../utils/mixins
 
 doctype html
-html(lang="ru")
+html(lang="ru"  prefix="og: //ogp.me/ns#")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="description", content="Официальный сайт Евгения Александрова. Организация мероприятий и выступлений напрямую.")
         meta(name="keywords", content="Евгений Александров профессиональный ведущий шоумен, ведущий dj певец, ведущий мероприятий, ведущий на свадьбу, ведущий на корпоратив, ведущий на юбилей, ведущий в Москве, ведущий в московской области")
+        meta(property="og:title" content="Евгений Александров")
+        meta(property="og:description" content="Официальный сайт Евгения Александрова. Организация мероприятий и выступлений напрямую.")
+        meta(property="og:type" content="website")
+        meta(property="og:image" content="https://djkaraoke.ru/assets/img/gallery/min/img7-min.jpg")
+        meta(property="og:url" content="https://aesproduction.ru/")
         link(rel="stylesheet", href= cssPath)
         link(rel="shortcut icon", href="../../icons/aes-icon.ico")
         title= pageTitle
